@@ -22,14 +22,16 @@ handleSubmit(e){
 
   render(){
     return(
-      <div>
+      <div id="journalEntry">
         <textarea
         id="textArea"
         value={this.state.journalEntry}
         type="text"
         onChange={this.handleChange}
         />
-        <button onClick={this.handleSubmit}>Submit</button>
+        <div id="submitEntry">
+          <button onClick={this.handleSubmit}>Submit</button>
+        </div>
       </div>
     )
   }

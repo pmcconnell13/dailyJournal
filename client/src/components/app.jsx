@@ -83,10 +83,12 @@ class App extends React.Component {
   render() {
     const { page, list, date, keyword, previousEntries } = this.state;
     return(
-      <div id="body">
+      <div>
         <h1>Journal Genie</h1>
-        <button onClick={this.changePage} value="1">Write Something</button>
-        <button onClick={this.changePage} value="2">Find Something</button>
+        <div id="mainButtons">
+          <button id="writeSomething" onClick={this.changePage} value="1">Write Something</button>
+          <button onClick={this.changePage} value="2">Find Something</button>
+        </div>
         {
           page === 1 &&
           <div>
@@ -96,11 +98,12 @@ class App extends React.Component {
         {
           page === 2 &&
           <div>
-            <PreviousEntries findEntrySubmit={this.findEntrySubmit} handleChange={this.handleChange} keyword={keyword} date={date}/>
-            {
-              list === true &&
-              <JournalList id="journalList" previousEntries={previousEntries} keyword={keyword} date={date}/>
-            }
+            <div id="searchBars">
+              <PreviousEntries findEntrySubmit={this.findEntrySubmit} handleChange={this.handleChange} keyword={keyword} date={date}/>
+            {/* {
+              list === true && */}
+              <JournalList previousEntries={previousEntries} keyword={keyword} date={date}/>
+            </div>
           </div>
         }
       </div>

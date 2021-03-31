@@ -2,19 +2,54 @@ body {
   background-color: rgba(145, 178, 199, .3);
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
-  color:#807B73;
 }
 
 h1 {
   text-align: center;
   text-shadow: 1px 1px 4px;
+  color:#807B73
+  /* transition: color 0.3s ease; */
 }
 
+/* h1:hover {
+  color: #f7f5ec;
+} */
+/*   buttons   */
 button {
   font-family: 'Montserrat', sans-serif;
+  background-color: rgba(145, 178, 199, .2);
+  width: 150px;
+  height: 30px;
   border: none;
   box-shadow: 2px 2px 4px #807B73;
   border-radius: 2px;
+  outline: none;
+  align-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FBFAF5;
+}
+
+#mainButtons {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+/*   Write Entry  */
+#writeSomething {
+  margin-right: 30px;
+}
+
+#submitEntry {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 #textArea {
@@ -38,24 +73,93 @@ button {
  outline: none;
 }
 
+.submitSize {
+  width: 300px;
+}
+
+/*   find entries   */
+
+#searchBars {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 3;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+#previousEntriesDiv {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  margin: auto;
+}
+
+#keywordSearch {
+  margin-right: 10px;
+}
+
+#keywordInput {
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#keywordInput:focus {
+  border: 2px solid #807B73;
+}
+
+#dateInput {
+  outline: none;
+  cursor: pointer;
+}
+
+#dateSearch {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#searchEntriesButton {
+  margin-left: 20px;
+}
+
 #journalList {
-  /* border: 1px solid #EEEEEE;
+  padding-top: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#listEntry::-webkit-scrollbar {
+  display: none;
+}
+
+#listEntry {
+  /* display: flex;
+  margin: auto;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 500px;
+  height: 200px;
+  border: solid 1px; */
+
+  border: 1px solid #EEEEEE;
   box-shadow: 1px 1px 0 #DDDDDD;
   display: block;
-  font-family: 'Marck Script',cursive;
-  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   line-height: 50px;
   margin: 2% auto;
   padding: 11px 20px 0 70px;
-  resize: none;
-  height: 500px;
+  background-color: white;
+  overflow: auto;
+  height: 300px;
   width: 530px;
 
   background-image: -moz-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0px), -moz-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -moz-radial-gradient(3.9% 46% , circle closest-corner, #CCCCCC, #CCCCCC 43.5%, transparent 0%);
-  background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%); */
+  background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
+
+  -webkit-background-size:  100% 50px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background-size: 100% 50px;
 }
 
-#journalListEntry {
-  display: flex;
-
-}

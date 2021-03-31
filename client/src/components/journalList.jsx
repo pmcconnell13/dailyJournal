@@ -2,17 +2,21 @@ import React from 'react';
 import JournalListEntry from './journalListEntry.jsx';
 
 const JournalList = ({ previousEntries, keyword, date }) => {
-  console.log(previousEntries)
-  console.log(date)
-  console.log(keyword)
   return(
-    <div>
+    <div id="journalList">
       {
-        previousEntries.map((entry) => {
-          console.log(entry.entry_date)
-          if (entry.entry_body.indexOf(keyword) !== -1 || (entry.entry_date && entry.entry_date.toString().split("T")[0] === date)) {
-            return <JournalListEntry key={entry.journal_id} entry={entry}/>
+        previousEntries.sort((a, b) => b.journal_id - a.journal_id)
+          .map((entry) => {
+          if (entry.entry_body.toLowerCase().indexOf(keyword.toLowerCase()) !== -1) {
+            if (date === '') {
+              return <JournalListEntry key={entry.journal_id} entry={entry}/>
+            } else if (entry.entry_date.toString().split("T")[0] === date) {
+              return <JournalListEntry key={entry.journal_id} entry={entry}/>
+            }
           }
+          // || (entry.entry_date && entry.entry_date.toString().split("T")[0] === date)) {
+          //   return <JournalListEntry key={entry.journal_id} entry={entry}/>
+          // }
         })
       }
     </div>
