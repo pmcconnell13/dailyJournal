@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS journalGenie;
+CREATE DATABASE journalGenie;
+USE journalGenie;
+
+CREATE TABLE  entries (
+  journal_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  entry_body TEXT NOT NULL,
+  entry_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+  meditation_time SMALLINT UNSIGNED DEFAULT 0
+);
