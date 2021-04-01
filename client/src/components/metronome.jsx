@@ -26,6 +26,7 @@ class Metronome extends React.Component {
 
     return (
       <div className="metronome">
+        <div id="metronomeTitle">Metronome</div>
         <div className="bpm-slider">
           <div>{bpm} BPM</div>
           <input
@@ -36,7 +37,7 @@ class Metronome extends React.Component {
             onChange={this.handleBpmChange}
             />
         </div>
-        <button>
+        <button id="metronomeButton">
           {playing ? 'Stop' : 'Start'}
         </button>
       </div>

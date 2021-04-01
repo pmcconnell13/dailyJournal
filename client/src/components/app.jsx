@@ -6,6 +6,7 @@ import JournalList from './journalList.jsx'
 import genie from '../../dist/genie.jpg';
 import journalEntriesCache from '../../../server/journalEntriesCache.js';
 import Metronome from './metronome.jsx';
+import Timer from './timer.jsx';
 
 
 class App extends React.Component {
@@ -20,7 +21,6 @@ class App extends React.Component {
     }
 
     this.addEntry = this.addEntry.bind(this);
-    this.getEntries = this.getEntries.bind(this);
     this.changePage = this.changePage.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.findEntrySubmit = this.findEntrySubmit.bind(this);
@@ -66,25 +66,10 @@ class App extends React.Component {
   }
 
   changePage(e){
-    console.log(e.target.value)
     e.preventDefault();
     this.setState({
       page: Number(e.target.value) || Number(e.target.id)
     })
-  }
-
-  getEntries(entrySearch){
-    console.log(entrySearch)
-    const { previousEntries } = this.state;
-    // axios.get(`/journal/keyword=${entrySearch.keyword}&date=${entrySearch.date}`)
-    //   .then((results) => {
-    //     this.setState({
-    //       previousEntries: [...previousEntries, results.data]
-    //     })
-    //   })
-    //   .catch((err) => {
-    //     console.log('err', err)
-    //   })
   }
 
   render() {
@@ -123,7 +108,12 @@ class App extends React.Component {
         {
           page === 3 &&
           <div>
-           <Metronome />
+            <div id="metronome">
+              <Metronome />
+            </div>
+            <div id="timer">
+              <Timer />
+            </div>
           </div>
         }
         {
