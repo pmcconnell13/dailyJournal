@@ -2,6 +2,8 @@ body {
   background-color: #DFEDFF;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -47,13 +49,12 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
 }
 
 #metronome {
   justify-content: center;
   margin-top: 30px;
-  width: 400px;
+  width: 800px;
   border-bottom: solid 1px #807B73;
 }
 
@@ -71,6 +72,12 @@ button:hover {
   font-weight: bold;
 }
 
+#bpmLabel {
+  font-size: 20px;
+  font-weight: bold;
+  color: #807B73;
+}
+
 .metronome {
   text-align: center;
   max-width: 375px;
@@ -82,14 +89,15 @@ button:hover {
   margin-top: 100px;
   width: 100%;
   margin: 10px;
-  color: lavender;
+  color: #FBFAF5;
 }
 
 #timer {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  width: 600px;
+  width: 1000px;
+
 }
 
 #timerBlock {
@@ -100,7 +108,8 @@ button:hover {
   padding-top: auto;
   margin-top: 30px;
   font-size: 60px;
-  width: 200px;
+  width: 225px;
+  border-radius: 40px;
   box-shadow: 2px 2px 4px #807B73;
 }
 
@@ -121,6 +130,8 @@ button:hover {
   width: 40px;
   outline: none;
   margin-left: 5px;
+  border: none;
+  background-color: #FBFAF5;
 }
 
 #timerButtonDiv {
@@ -139,10 +150,7 @@ button:hover {
 #mainButtons {
   display: flex;
   justify-content: center;
-  /* margin: auto; */
   margin-top: 30px;
-  /* align-content: center;
-  flex-wrap: wrap; */
 }
 
 /*   Write Entry  */
@@ -208,19 +216,12 @@ button:hover {
   margin-right: 10px;
 }
 
+#dateInput,
 #keywordInput {
   outline: none;
   cursor: pointer;
-  transition: 0.5s ease;
-}
-
-#keywordInput:focus {
-  border: 2px solid #807B73;
-}
-
-#dateInput {
-  outline: none;
-  cursor: pointer;
+  border: none;
+  background-color: #FBFAF5;
 }
 
 #dateSearch {
@@ -244,14 +245,6 @@ button:hover {
 }
 
 #listEntry {
-  /* display: flex;
-  margin: auto;
-  margin-bottom: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 500px;
-  height: 200px;
-  border: solid 1px; */
 
   border: 1px solid #EEEEEE;
   box-shadow: 1px 1px 0 #DDDDDD;

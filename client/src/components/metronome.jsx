@@ -28,7 +28,7 @@ class Metronome extends React.Component {
       <div className="metronome">
         <div id="metronomeTitle">Metronome</div>
         <div className="bpm-slider">
-          <div>{bpm} BPM</div>
+          <div id="bpmLabel">{bpm} BPM</div>
           <input
             type="range"
             min="20"
