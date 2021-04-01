@@ -51,8 +51,10 @@ button:hover {
 }
 
 .bpm-slider input {
+  margin-top: 100px;
   width: 100%;
   margin: 10px;
+  color: lavender;
 }
 
 /*   buttons   */
@@ -194,4 +196,16 @@ button:hover {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   background-size: 100% 50px;
+}
+
+
+#entryConfirm {
+  display: flex;
+  justify-content: center;
+  color:#807B73;
+  margin-top: 10px;
+  margin-bottom: -18px;
+  font-size: 50px;
+  margin-top: 30px;
+  text-shadow: 1px 1px 4px;
 }

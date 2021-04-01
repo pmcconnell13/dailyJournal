@@ -43,6 +43,9 @@ class App extends React.Component {
       entry: journal
     })
       .then((result) => {
+        this.setState({
+          page: 4
+        })
       })
       .catch((err) => {
         console.log('err', err)
@@ -91,8 +94,8 @@ class App extends React.Component {
         <h1 id="0" onClick={this.changePage}>Journal Genie</h1>
         <div id="mainButtons">
           <button id="meditate" onClick={this.changePage} value="3">Meditate</button>
-          <button id="writeSomething" onClick={this.changePage} value="1">Write Something</button>
-          <button id="findSomething" onClick={this.changePage} value="2">Find Something</button>
+          <button id="writeSomething" onClick={this.changePage} value="1">Write</button>
+          <button id="findSomething" onClick={this.changePage} value="2">Find</button>
         </div>
         {
         page === 0 &&
@@ -103,7 +106,7 @@ class App extends React.Component {
         {
           page === 1 &&
           <div>
-            <JournalForm addEntry={this.addEntry} />
+            <JournalForm addEntry={this.addEntry}/>
           </div>
         }
         {
@@ -121,6 +124,17 @@ class App extends React.Component {
           page === 3 &&
           <div>
            <Metronome />
+          </div>
+        }
+        {
+          page === 4 &&
+          <div>
+            <div id="entryConfirm">
+              Another Entry In The Books!
+            </div>
+            <div id="genie">
+              <img src={genie} />
+            </div>
           </div>
         }
       </div>
