@@ -131,6 +131,7 @@ button:hover {
   outline: none;
   margin-left: 5px;
   border: none;
+  font-family: 'Montserrat', sans-serif;
   background-color: #FBFAF5;
 }
 
@@ -221,6 +222,7 @@ button:hover {
   outline: none;
   cursor: pointer;
   border: none;
+  font-family: 'Montserrat', sans-serif;
   background-color: #FBFAF5;
 }
 
