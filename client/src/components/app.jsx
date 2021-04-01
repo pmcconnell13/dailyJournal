@@ -4,7 +4,8 @@ import JournalForm from './journalForm.jsx';
 import PreviousEntries from './previousEntries.jsx';
 import JournalList from './journalList.jsx'
 import genie from '../../dist/genie.jpg';
-import journalEntriesCache from '../../../server/journalEntriesCache.js'
+import journalEntriesCache from '../../../server/journalEntriesCache.js';
+import Metronome from './metronome.jsx';
 
 
 class App extends React.Component {
@@ -62,6 +63,7 @@ class App extends React.Component {
   }
 
   changePage(e){
+    console.log(e.target.value)
     e.preventDefault();
     this.setState({
       page: Number(e.target.value) || Number(e.target.id)
@@ -88,6 +90,7 @@ class App extends React.Component {
       <div>
         <h1 id="0" onClick={this.changePage}>Journal Genie</h1>
         <div id="mainButtons">
+          <button id="meditate" onClick={this.changePage} value="3">Meditate</button>
           <button id="writeSomething" onClick={this.changePage} value="1">Write Something</button>
           <button id="findSomething" onClick={this.changePage} value="2">Find Something</button>
         </div>
@@ -112,6 +115,12 @@ class App extends React.Component {
               list === true && */}
               <JournalList previousEntries={previousEntries} keyword={keyword} date={date}/>
             </div>
+          </div>
+        }
+        {
+          page === 3 &&
+          <div>
+           <Metronome />
           </div>
         }
       </div>
