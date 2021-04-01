@@ -42,10 +42,19 @@ button:hover {
   margin-left: 40px;
 }
 
-/* metronome */
+/* meditation */
+#meditationCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 #metronome {
   justify-content: center;
   margin-top: 30px;
+  width: 400px;
+  border-bottom: solid 1px #807B73;
 }
 
 #metronomeButton {
@@ -59,7 +68,7 @@ button:hover {
   color:#807B73;
   margin-bottom: 30px;
   font-size: 25px;
-  text-shadow: 1px 1px 4px;
+  font-weight: bold;
 }
 
 .metronome {
@@ -75,6 +84,55 @@ button:hover {
   margin: 10px;
   color: lavender;
 }
+
+#timer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 600px;
+}
+
+#timerBlock {
+  display: flex;
+  justify-content: center;
+  background-color: #FBFAF5;
+  margin: auto;
+  padding-top: auto;
+  margin-top: 30px;
+  font-size: 60px;
+  width: 200px;
+  box-shadow: 2px 2px 4px #807B73;
+}
+
+#timeInput {
+  display: flex;
+  justify-content: center;
+}
+
+#minInput,
+#secInput {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#minuteInput,
+#secondInput {
+  width: 40px;
+  outline: none;
+  margin-left: 5px;
+}
+
+#timerButtonDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#timerButton {
+  width: 50px;
+}
+
 
 /*   buttons   */
 

@@ -38,7 +38,7 @@ class Metronome extends React.Component {
             />
         </div>
         <button id="metronomeButton">
-          {playing ? 'Stop' : 'Start'}
+          {playing ? 'Stop' : 'Play'}
         </button>
       </div>
     );

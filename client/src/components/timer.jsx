@@ -4,10 +4,11 @@ class Timer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-    time: {},
-    seconds: 0,
-    min: '',
-    sec: ''
+      time: {},
+      seconds: 0,
+      min: '',
+      sec: '',
+      endTime: false
     };
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
@@ -46,7 +47,8 @@ class Timer extends React.Component {
 
   timeToSeconds(min, sec) {
     this.setState({
-      seconds: (min * 60) + sec
+      seconds: (min * 60) + sec,
+      time:  this.secondsToTime(this.state.seconds)
     });
   }
 
@@ -67,6 +69,9 @@ class Timer extends React.Component {
 
     // Check if we're at zero.
     if (seconds == 0) {
+      this.setState({
+        endTime: true
+      })
       clearInterval(this.timer);
     }
   }
@@ -74,16 +79,25 @@ class Timer extends React.Component {
   render(){
     return (
     <div>
-      <label>How long would you like to meditate for today?</label>
-
-      <label>Minutes</label>
-      <input type="number" name="min" value={this.state.min} onChange={this.inputTime}/>
-
-      <label>Seconds</label>
-      <input type="number" name="sec" value={this.state.sec} onChange={this.inputTime}/>
-
-      m: {this.state.time.m} s: {this.state.time.s}
-      <button onClick={this.startTimer}>Start</button>
+      <div id="metronomeTitle">
+        Timer
+      </div>
+      <div id="timeInput">
+        <div id="minInput">
+          Minutes:
+          <input id="minuteInput" type="number" min="0" name="min" value={this.state.min} onChange={this.inputTime}/>
+        </div>
+        <div id="secInput">
+          Seconds:
+          <input id="secondInput" type="number" min="0" name="sec" value={this.state.sec} onChange={this.inputTime}/>
+        </div>
+      </div>
+      <div id="timerBlock">
+        {this.state.time.m} : {this.state.time.s}
+      </div>
+      <div id="timerButtonDiv">
+        <button id="timerButton" onClick={this.startTimer}>Start</button>
+      </div>
     </div>
     )
   }

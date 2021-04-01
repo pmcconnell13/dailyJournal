@@ -107,7 +107,7 @@ class App extends React.Component {
         }
         {
           page === 3 &&
-          <div>
+          <div id="meditationCards">
             <div id="metronome">
               <Metronome />
             </div>
