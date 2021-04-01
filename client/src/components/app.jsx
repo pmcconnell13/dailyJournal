@@ -3,6 +3,7 @@ import axios from 'axios';
 import JournalForm from './journalForm.jsx';
 import PreviousEntries from './previousEntries.jsx';
 import JournalList from './journalList.jsx'
+import genie from '../../dist/genie.jpg';
 import journalEntriesCache from '../../../server/journalEntriesCache.js'
 
 
@@ -55,14 +56,15 @@ class App extends React.Component {
 
   findEntrySubmit(){
     this.setState({
-      list: true
+      keyword: '',
+      date: ''
     })
   }
 
   changePage(e){
     e.preventDefault();
     this.setState({
-      page: Number(e.target.value)
+      page: Number(e.target.value) || Number(e.target.id)
     })
   }
 
@@ -84,15 +86,21 @@ class App extends React.Component {
     const { page, list, date, keyword, previousEntries } = this.state;
     return(
       <div>
-        <h1>Journal Genie</h1>
+        <h1 id="0" onClick={this.changePage}>Journal Genie</h1>
         <div id="mainButtons">
           <button id="writeSomething" onClick={this.changePage} value="1">Write Something</button>
-          <button onClick={this.changePage} value="2">Find Something</button>
+          <button id="findSomething" onClick={this.changePage} value="2">Find Something</button>
         </div>
+        {
+        page === 0 &&
+        <div id="genie">
+          <img src={genie} />
+        </div>
+        }
         {
           page === 1 &&
           <div>
-            <JournalForm addEntry={this.addEntry}/>
+            <JournalForm addEntry={this.addEntry} />
           </div>
         }
         {

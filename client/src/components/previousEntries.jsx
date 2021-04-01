@@ -23,9 +23,9 @@ const PreviousEntries = ({date, keyword, handleChange, findEntrySubmit}) => {
         onChange={handleChange}
         />
       </div>
-      {/* <div id="searchEntriesButton">
-        <button onClick={findEntrySubmit}>Search Entries</button>
-      </div> */}
+      <div>
+        <button id="clearDateButton" className="x" onClick={findEntrySubmit}>Clear</button>
+      </div>
     </div>
   )
 }

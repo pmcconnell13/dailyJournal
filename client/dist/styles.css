@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(145, 178, 199, .3);
+  background-color: #DFEDFF;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
 }
@@ -7,14 +7,15 @@ body {
 h1 {
   text-align: center;
   text-shadow: 1px 1px 4px;
-  color:#807B73
-  /* transition: color 0.3s ease; */
+  color:#807B73;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* h1:hover {
+h1:hover {
   color: #f7f5ec;
-} */
-/*   buttons   */
+}
+
 button {
   font-family: 'Montserrat', sans-serif;
   background-color: rgba(145, 178, 199, .2);
@@ -33,12 +34,21 @@ button:hover {
   background-color: #FBFAF5;
 }
 
+#genie {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+/*   buttons   */
+
 #mainButtons {
   display: flex;
   justify-content: center;
-  margin: auto;
-  align-content: center;
-  flex-wrap: wrap;
+  /* margin: auto; */
+  margin-top: 40px;
+  /* align-content: center;
+  flex-wrap: wrap; */
 }
 
 /*   Write Entry  */
@@ -78,6 +88,10 @@ button:hover {
 }
 
 /*   find entries   */
+#clearDateButton.x {
+  width: 50px;
+  height: 20px;
+}
 
 #searchBars {
   display: grid;
@@ -119,7 +133,9 @@ button:hover {
 }
 
 #searchEntriesButton {
-  margin-left: 20px;
+  margin-left: 10px;
+  width: 50px;
+  height: 20px;
 }
 
 #journalList {
@@ -162,4 +178,3 @@ button:hover {
   scrollbar-width: none;  /* Firefox */
   background-size: 100% 50px;
 }
-
