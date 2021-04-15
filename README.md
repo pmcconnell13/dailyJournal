@@ -22,7 +22,6 @@ Use the package manager [npm](https://www.npmjs.com/get-npm) to install Journal 
 
 ```bash
 npm install
-mysql -u {USERNAME} -p {PASSWORD} < db/schema.sql
 npm start
 ```
 
