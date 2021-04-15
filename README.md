@@ -22,7 +22,6 @@ Use the package manager [npm](https://www.npmjs.com/get-npm) to install Journal 
 
 ```bash
 npm install
-mysql -u {USERNAME} -p {PASSWORD} < db/schema.sql
 npm start
 ```
 
@@ -39,8 +38,8 @@ Head to localhost:3000 in browser
 
 
 ## Author
-| Name                | Github                            | LinkedIn |
-| --------------------|:------------------------------:   |------:|
+| Name                | Github                            | LinkedIn                                     |
+| --------------------|:------------------------------:   |------------------------------------------:   |
 | Patrick McConnell   |https://github.com/pmcconnell13    |www.linkedin.com/in/charlespatrickmcconnell   |
 
 
