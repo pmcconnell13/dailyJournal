@@ -40,7 +40,7 @@ Head to localhost:3000 in browser
 
 ## Author
 | Name                | Github                            | LinkedIn                                     |
-| --------------------|:------------------------------:   |------:|
+| --------------------|:------------------------------:   |------------------------------------------:   |
 | Patrick McConnell   |https://github.com/pmcconnell13    |www.linkedin.com/in/charlespatrickmcconnell   |
 
 
