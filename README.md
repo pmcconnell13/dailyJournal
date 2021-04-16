@@ -7,14 +7,15 @@
 A meditation/journal app designed for a relaxing and seamless user experience.
 
 ## Screen Shot
-### Landing Page
-<img src="./readMeImages/mainPage.jpg" width="300px">
 
 ### Journal Entry
-<img src="./readMeImages/journalEntry.jpg" width="300px">
+<img src="./readMeImages/journalEntryDemo.gif" width="300px">
+
+### Previous Entries
+<img src="./readMeImages/previousEntriesDemo.gif" width="300px">
 
 ### Meditation Tools
-<img src="./readMeImages/meditationTools.jpg" width="300px">
+<img src="./readMeImages/meditationToolDemo.gif" width="300px">
 
 ## Installation
 
