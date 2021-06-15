@@ -99,8 +99,6 @@ class App extends React.Component {
           <div>
             <div id="searchBars">
               <PreviousEntries findEntrySubmit={this.findEntrySubmit} handleChange={this.handleChange} keyword={keyword} date={date}/>
-            {/* {
-              list === true && */}
               <JournalList previousEntries={previousEntries} keyword={keyword} date={date}/>
             </div>
           </div>
