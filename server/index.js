@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('../db/dbConnection.js');
 const journalEntriesCache = require('./journalEntriesCache.js');
 
-const port = 3000;
+const port = 4000;
 const app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));

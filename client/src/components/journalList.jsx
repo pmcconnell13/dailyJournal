@@ -14,9 +14,6 @@ const JournalList = ({ previousEntries, keyword, date }) => {
               return <JournalListEntry key={entry.journal_id} entry={entry}/>
             }
           }
-          // || (entry.entry_date && entry.entry_date.toString().split("T")[0] === date)) {
-          //   return <JournalListEntry key={entry.journal_id} entry={entry}/>
-          // }
         })
       }
     </div>
